@@ -17,7 +17,7 @@ provider "google" {
 }
 
 resource "random_string" "suffix" {
-  length  = 8
+  length  = 10
   upper   = false
   special = false
 }
