@@ -6,6 +6,10 @@ variable "base_bucket_name" {
 variable "GOOGLE_CREDENTIALS" {
   description = "GCP service account key in JSON format"
   type        = string
-  default     = "xyz"
+  sensitive   = true
+}
+variable "PROJECT_ID" {
+  description = "GCP project ID"
+  type        = string
   sensitive   = true
 }

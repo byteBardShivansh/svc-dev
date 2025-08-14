@@ -10,11 +10,13 @@ terraform {
     }
   }
 }
+
 provider "google" {
   credentials = var.GOOGLE_CREDENTIALS
-  project     = "sound-habitat-462410-m4"
+  project     = var.PROJECT_ID
   region      = "us-central1"
 }
+
 resource "random_string" "suffix" {
   length  = 10
   upper   = false
