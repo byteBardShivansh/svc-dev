@@ -3,13 +3,3 @@ variable "base_bucket_name" {
   type        = string
   default     = "web-storage"
 }
-variable "GOOGLE_CREDENTIALS" {
-  description = "GCP service account key in JSON format"
-  type        = string
-  sensitive   = true
-}
-variable "PROJECT_ID" {
-  description = "GCP project ID"
-  type        = string
-  sensitive   = true
-}
