@@ -3,3 +3,8 @@ variable "base_bucket_name" {
   type        = string
   default     = "web-logs-storage"
 }
+
+variable "PROJECT_ID" {
+  description = "The GCP project ID to deploy resources into."
+  type        = string
+}
