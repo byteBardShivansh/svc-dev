@@ -29,3 +29,27 @@ resource "google_storage_bucket" "default" {
     enabled = true
   }
 }
+terraform {
+  required_providers {
+    google = {
+      source  = "hashicorp/google"
+      version = "6.44.0"
+    }
+  }
+  backend "gcs" {
+    bucket  = "<BUCKET>"
+    prefix  = "<PREFIX>"
+  }
+}
+
+provider "random" {
+}
+
+provider "google" {
+}
+
+module "svc-dev" {
+  source = "github.com/bytebardshivansh/svc-dev"
+
+  PROJECT_ID = "sound-habitat-462410-m4"
+}
